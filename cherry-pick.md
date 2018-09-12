@@ -8,19 +8,19 @@ git中一个比较实用的命令：cherry-pick，使用该命令可以将任意
 
 下方就演示了cherry-pick命令的使用方法。在 master 分支上，执行  git cherry-pick <一些commit的哈希值>  然后将这些提交合并到master分支上。这些分支会根据cherry-pick的顺序进行merge，每次merge都会形成一个新的提交。与rebase命令不同，虽然会产生一个新的提交，而之前的提交是不变的。具体如下所示: 
 
-![image](F:\doc\github\git-doc\images\545446-20180101211735987-1396135304.gif)
+![image](images/545446-20180101211735987-1396135304.gif)
 
 接下来我们来看一下具体在终端上cherry-pick的操作命令。下方是目前分支的状态，并且处于master分支上。现在我们要做的事情是将 d98ff43  这个commit 拿到master上。
 
-![image](F:\doc\github\git-doc\images\545446-20180101215658393-1019260859.png)
+![image](images/545446-20180101215658393-1019260859.png)
 
 下方就是我们执行cherry-pick的命令，如下所示。下方执行cherry-pick时是非常顺利的，没有产生冲突。当提交进行合并时会产生冲突，就不是这个样子了，稍后会演示到。
 
-![image](F:\doc\github\git-doc\images\545446-20180101220103034-1238339560.png)
+![image](images/545446-20180101220103034-1238339560.png)
 
 下方就是顺利的cherry-pick后的样子。
 
-![image](F:\doc\github\git-doc\images\545446-20180101215813831-302458645.png)
+![image](images/545446-20180101215813831-302458645.png)
 
 ## cherry-pick的冲突解决
 
@@ -34,9 +34,9 @@ git中一个比较实用的命令：cherry-pick，使用该命令可以将任意
 
 **具体操作步骤如下所示：**
 
-![image](F:\doc\github\git-doc\images\545446-20180101223030237-1095076859.png)
+![image](images/545446-20180101223030237-1095076859.png)
 
 下方是上述操作的最终结果，cherry-pick了三个commit，冲突了三次，解决了三次。如下所示：
 
-![image](F:\doc\github\git-doc\images\545446-20180101222817003-1032690423.png)
+![image](images/545446-20180101222817003-1032690423.png)
 
